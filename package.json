@@ -2,10 +2,16 @@
   "name": "git-files",
   "version": "0.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "cmd.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "MIT"
+  "author": "Gnedov Pavel <pavel@gnedov.info>",
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "^4.17.4",
+    "minimist": "^1.2.0",
+    "shelljs": "^0.7.8",
+    "webpack": "^3.4.1"
+  }
 }
