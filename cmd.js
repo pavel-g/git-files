@@ -8,7 +8,7 @@ var help = [
 	'git-files <from>..<to>',
 	'',
 	'Optional arguments:',
-	'  --format=json - json output'
+	'  --format=[json|oneline] - json output'
 ].join("\n");
 
 if (args.help) {
@@ -20,6 +20,10 @@ if (args.help) {
 	var files = git.getFiles();
 	if (args.format === 'json') {
 		console.log(JSON.stringify(files));
+	} else if (args.format === 'oneline') {
+		if (files.length > 0) {
+			console.log('"' + files.join('" "') + '"');
+		}
 	} else {
 		console.log(files.join("\n"));
 	}
